@@ -1,0 +1,21 @@
+/*** HEADER NAV ***/
+.navbar-nav .nav-item .nav-link:before {
+  content: "|";
+  margin-right: 10px;
+  opacity: 50%;
+}
+
+.navbar-nav .nav-item:first-child .nav-link:before {
+  content: "";
+}
+
+/*** HEADER ***/
+header .header_container {
+  background: url("IMG/header_wallpaper.jpg");
+  background-size: cover;
+  height: 275px;
+}
+
+header .header_container .container {
+  padding-top: 150px;
+}
