@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    require "core/constants.php";
-    require "core/functions.php";
+    require "Core/constants.php";
+    require "Core/functions.php";
 
     if(!isset($_GET['p']) || $_GET['p'] == "")
     {
@@ -10,7 +10,7 @@
     }
     else
     {
-        if(file_exists("/controllers/".$_GET['p'].".php"))
+        if(file_exists("Controllers/".$_GET['p'].".php"))
         {
             $page = $_GET["p"].".php";
         }
@@ -21,7 +21,7 @@
     }
 
     ob_start();
-        require "/controllers/".$page;
+        require "Controllers/".$page;
         $content = ob_get_contents();
     ob_end_clean();
 
